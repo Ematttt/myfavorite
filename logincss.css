@@ -1,0 +1,82 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1a1a1a; /* Dark black background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background: linear-gradient(135deg, #000000, #333333); /* Subtle gradient from black to dark gray */
+}
+
+.login-container {
+    background: #222222; /* Dark background for the login box */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    width: 320px;
+    border: 1px solid #444444; /* Subtle border to match the dark theme */
+}
+
+h1 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff; /* White color for the heading */
+    font-size: 24px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    margin-right: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #cccccc; /* Lighter gray color for labels */
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #555555; /* Subtle border for inputs */
+    border-radius: 6px;
+    font-size: 16px;
+    color: #eeeeee; /* Light text color for input fields */
+    background-color: #333333; /* Dark background for inputs */
+}
+
+input:focus {
+    border: 1px solid #9b4dff; /* Violet border on focus for a neon effect */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4e2a84; /* Neon violet color for the button */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s; /* Smooth transition effect */
+}
+
+button:hover {
+    background-color: #9b4dff; /* Lighter violet when hovered */
+}
+
+.forgot-password, .signup-link {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: #b2b2b2;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover, .signup-link:hover {
+    color: #9b4dff; /* Violet color for hover effect on links */
+}

@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    background-color: black;
+    transition: 0.5s ease;
+}
+
+header .logo {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex; /* Align logo image and text side by side */
+    align-items: center; /* Vertically center the logo and text */
+}
+
+header .logo img {
+    width: 40px; /* Adjust the logo width */
+    height: 40px; /* Adjust the logo height */
+    margin-right: 50px; /* Space between logo and text */
+    object-fit: contain; /* Keep the aspect ratio of the logo */
+}
+
+header .navbar {
+    position: relative;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+header .navbar .navbar-items {
+    display: flex;
+    align-items: center;
+}
+
+header .navbar .navbar-items a {
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+header .navbar .navbar-items a:before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header .navbar .navbar-items a:hover:before {
+    width: 100%;
+}
+
+section {
+    padding: 100px 200px;
+    min-height: 100vh;
+    display: flex;
+}
+
+.home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: black;
+    height: 100%;
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(images/gamingsanctuary.jpg) center/cover no-repeat;
+    background-color: rgba(51, 0, 0, 0.5);
+    opacity: 0.27;
+    z-index: 1;
+}
+
+.home > * {
+    position: relative;
+    z-index: 2;
+}
+
+.home .content {
+    z-index: 888;
+    color: #fff;
+    width: 70%;
+    margin-top: 50px;
+}
+
+.home .content h1 {
+    font-size: 4em;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 75px;
+    margin-bottom: 40px;
+}
+
+.home .content p {
+    margin-bottom: 65px;
+    text-align: justify;
+}
+
+.home .content a {
+    background: #fff;
+    padding: 10px 25px;
+    color: black;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.home .media {
+    z-index: 888;
+    position: absolute;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease;
+}
+
+.home .media a {
+    color: #fff;
+    size: 1.6em;
+    transition: 0.3s ease;
+}
+
+.home .media a:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.home .media a:hover {
+    transform: scale(1.5);
+}
+
+.about {
+    padding: 100px 150px;
+    background-color: #f8f9fa;
+}
+
+.about h3 {
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px; 
+}
+
+.about p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #555;
+    margin-top: 30px;
+    text-align: justify;
+    padding: 0 50px;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.game {
+    text-align: center;
+}
+
+.game img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.game p {
+    font-size: 1em;
+    color: #333;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 1040px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    section {
+        padding: 100px 20px;
+    }
+
+    .home .media {
+        right: 15px;
+    }
+
+    header .navbar {
+        display: none;
+    }
+}
